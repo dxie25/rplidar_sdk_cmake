@@ -1,0 +1,2 @@
+add_executable(custom_baudrate main.cpp)
+target_link_libraries(custom_baudrate rplidar_driver)

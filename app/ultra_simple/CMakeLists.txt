@@ -1,0 +1,2 @@
+add_executable(ultra_simple main.cpp)
+target_link_libraries(ultra_simple rplidar_driver)

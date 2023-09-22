@@ -1,0 +1,2 @@
+add_executable(simple_grabber main.cpp)
+target_link_libraries(simple_grabber rplidar_driver)
