@@ -40,7 +40,7 @@ endif()
 add_library(rplidar_driver ${SDK_SRC})
 target_include_directories(rplidar_driver
     PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
-    PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src"
+    PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src"
 )
 
 
