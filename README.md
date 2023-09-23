@@ -58,6 +58,19 @@ Please make sure you have make and g++ installed, and then just invoke make in t
 
 The Makefile compiles Release build by default, and you can also use `make DEBUG=1` to compile Debug builds.
 
+### Using CMake
+
+> Note: This build generator system has not been tested on all platforms.
+
+Here are some configurations of compilers and platforms that were able to build successfully:
+- MSVC (Visual C++ 2022) on Windows 11
+- g++ (GNU 10.5.0) on WSL (Ubuntu 20.04.6 LTS)
+
+Invoke CMake in the root directory.
+
+    cmake -S . -B build -DCMAKE_BUILD_TYPE=RELEASE
+    cmake --build build
+
 Cross Compile
 -------------
 
