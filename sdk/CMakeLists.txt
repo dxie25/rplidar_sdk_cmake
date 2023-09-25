@@ -20,6 +20,7 @@ if(WIN32)
     )
 elseif(APPLE)
     # Target system is Apple, hopefully macOS
+    add_compile_definitions("_MACOS")
     list(APPEND SDK_SRC
         src/arch/macOS/net_serial.cpp
         src/arch/macOS/net_socket.cpp
