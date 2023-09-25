@@ -8,10 +8,10 @@
 
 #define _WINSOCKAPI_
 
+#include <winsock2.h> // Need to include before windows.h in sdkcommon.h
 #include "sdkcommon.h"
 #include "..\..\hal\socket.h"
 #include <windows.h>  
-#include <winsock2.h>
 #include <ws2tcpip.h>
 
 #include <stdlib.h>  
@@ -244,7 +244,11 @@ u_result SocketAddress::getAddressAsString(char * buffer, size_t buffersize) con
 
         break;
     }
-    return ans<=0?RESULT_OPERATION_FAIL:RESULT_OK;
+
+    // Original code:
+    // return ans<=0?RESULT_OPERATION_FAIL:RESULT_OK;
+    // Probably supposed to be a null check
+    return ans == NULL ? RESULT_OPERATION_FAIL : RESULT_OK;
 }
 
 

@@ -64,6 +64,7 @@ The Makefile compiles Release build by default, and you can also use `make DEBUG
 
 Here are some configurations of compilers and platforms that were able to build successfully:
 - MSVC (Visual C++ 2022) on Windows 11
+- g++ (MinGW-W64 12.2.0) on Windows 11
 - g++ (GNU 10.5.0) on WSL (Ubuntu 20.04.6 LTS)
 - clang (Apple clang version 14.0.3) on macOS Ventura
 
